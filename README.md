@@ -4,7 +4,7 @@
 
 ### Game Summary
 
-The game is a point & click adventure in which you solve a murder case as Inspector Snickers. Since Inspector Snickers bumped his head during one of his missions, his cognitive abilities to solve the case are unfortunately somewhat limited
+The game is an adventure in which you solve a murder case as Inspector Snickers. Since Inspector Snickers bumped his head during one of his missions, his cognitive abilities to solve the case are unfortunately somewhat limited
 
 ### Inspiration
 
@@ -56,7 +56,7 @@ Inspector Snickers gains authority by holding up his ID card. Objects that see h
 
 | Mechanic                | Description                                                                                                         |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Movement                | By clicking, the player moves the inspector through the room.                                                       |
+| Movement                | By pressing W,A,S,D the player moves the inspector through the room.                                                       |
 | "I'M INSPECTOR SNICKERS" | When the ability button is clicked, the inspector draws attention to himself verbally and by holding up his ID card |
 
 ## Art & Audio
@@ -77,7 +77,7 @@ Inspector Snickers gains authority by holding up his ID card. Objects that see h
 
 ### Controls
 
-- Clicking
+- W, A, S, D
 
 ## Development Timeline
 
@@ -85,17 +85,17 @@ Inspector Snickers gains authority by holding up his ID card. Objects that see h
 
 | #  | Assignment | Type | Status | Issue | Notes |
 |----|------------|------|--------|-------|-------|
-| 1  |            |      |        |       |       |
-| 2  |            |      |        |       |       |
-| 3  |            |      |        |       |       |
-| 4  |            |      |        |       |       |
-| 5  |            |      |        |       |       |
-| 6  |            |      |        |       |       |
-| 7  |            |      |        |       |       |
-| 8  |            |      |        |       |       |
-| 9  |            |      |        |       |       |
-| 10 |            |      |        |       |       |
-| 11 |            |      |        |       |       |
-| 12 |            |      |        |       |       |
+| 1  | Design document | DOCUMENTATION | OPEN | https://github.com/DaDave/JameGam-31/issues/1 | Will be updated at the end |
+| 2  | Main character | ART | OPEN | https://github.com/DaDave/JameGam-31/issues/2 |  |
+| 3  | Rooms | ART | OPEN | https://github.com/DaDave/JameGam-31/issues/3 |  |
+| 4  | Main menu | CODING | OPEN | https://github.com/DaDave/JameGam-31/issues/4 |  |
+| 5  | Main menu music | AUDIO | OPEN | https://github.com/DaDave/JameGam-31/issues/5 |  |
+| 6  | Main character movement and ability | CODING | OPEN | https://github.com/DaDave/JameGam-31/issues/8 |  |
+| 7  | Rooms music | AUDIO | OPEN | https://github.com/DaDave/JameGam-31/issues/9 |  |
+| 8  | Pause menu | CODING | OPEN | https://github.com/DaDave/JameGam-31/issues/10 |  |
+| 9  | Final changes | OTHERS | OPEN | https://github.com/DaDave/JameGam-31/issues/11 |  |
+| 10 | Upload game | OTHERS | OPEN | https://github.com/DaDave/JameGam-31/issues/12 |  |
 
 ### Next Steps
+
+- More rooms
