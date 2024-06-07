@@ -6,9 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://chcm063ym44xe" path="res://Scenes/Components/movement_component.tscn" id="4_v85b2"]
 [ext_resource type="PackedScene" uid="uid://k15y10r6bpwp" path="res://Scenes/Components/animation_component.tscn" id="5_e7cyn"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_auh4k"]
-radius = 8.0
-height = 28.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_iunm8"]
+radius = 5.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_component", "movement_component", "animation_component")]
 script = ExtResource("1_8sweq")
@@ -17,12 +16,12 @@ movement_component = NodePath("MovementComponent")
 animation_component = NodePath("AnimationComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -12)
 sprite_frames = ExtResource("2_tjtvg")
 animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_auh4k")
+shape = SubResource("CircleShape2D_iunm8")
 
 [node name="InputComponent" parent="." instance=ExtResource("3_7pb2u")]
 
