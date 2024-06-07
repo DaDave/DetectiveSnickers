@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyvgpxd0rqg44"]
+[gd_scene load_steps=4 format=3 uid="uid://dyvgpxd0rqg44"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_q37t8"]
+[ext_resource type="PackedScene" uid="uid://xcp7qfxt0hfw" path="res://Scenes/level_1.tscn" id="2_4r4if"]
+[ext_resource type="Theme" uid="uid://dxxcqron0p625" path="res://Resources/UITheme/UITheme.tres" id="3_s3eru"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -10,29 +12,52 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q37t8")
+levelOneScene = ExtResource("2_4r4if")
 
 [node name="VerticalBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = -110.0
-offset_right = 115.0
-offset_bottom = -9.0
+offset_left = 22.0
+offset_top = -141.0
+offset_right = 161.0
+offset_bottom = -19.0
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VerticalBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_s3eru")
 text = "Start"
 
 [node name="CreditsButton" type="Button" parent="VerticalBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_s3eru")
 text = "Credits"
 
 [node name="QuitButton" type="Button" parent="VerticalBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_s3eru")
 text = "Quit"
+
+[node name="Credits" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 257.0
+offset_top = 101.0
+offset_right = 619.0
+offset_bottom = 341.0
+theme = ExtResource("3_s3eru")
+text = "Made by
+
+wuhsel (Coding)
+DaDave (Coding)
+klimagnet (Level design)
+Wara (Audio)
+
+asset pack: \"Modern interiors\" by LimeZu 
+(https://limezu.itch.io/moderninteriors)"
+horizontal_alignment = 2
 
 [connection signal="pressed" from="VerticalBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VerticalBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
