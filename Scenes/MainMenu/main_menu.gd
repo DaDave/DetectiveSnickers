@@ -1,4 +1,4 @@
-class_name main_menu
+class_name MainMenu
 
 extends Control
 
