@@ -6,5 +6,3 @@ class_name MovementComponent extends Node
 func handle_movement(body: CharacterBody2D, direction_horizontal: float, direction_vertical: float):
 	body.velocity.x = direction_horizontal * speed
 	body.velocity.y = direction_vertical * speed
-	
-	body.move_and_slide()

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bepnglsyir4sg"]
+
+[ext_resource type="Texture2D" uid="uid://mbejmsqpl1hd" path="res://Assets/Singles/Television.png" id="1_i20jm"]
+[ext_resource type="Script" path="res://Scenes/Interactables/television.gd" id="1_vk8t3"]
+[ext_resource type="SpriteFrames" uid="uid://cu4eroj0ynyim" path="res://Assets/Spritesheets/television_spriteframes.tres" id="2_4fesb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60hkf"]
+size = Vector2(27.697, 34)
+
+[node name="Television" type="StaticBody2D" node_paths=PackedStringArray("animated_sprite")]
+script = ExtResource("1_vk8t3")
+animated_sprite = NodePath("AnimatedSprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.421883, -1.94027)
+scale = Vector2(1, 1.042)
+texture = ExtResource("1_i20jm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.159477, 0.833139)
+scale = Vector2(0.521, 0.5)
+sprite_frames = ExtResource("2_4fesb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.0881405, 7)
+shape = SubResource("RectangleShape2D_60hkf")
