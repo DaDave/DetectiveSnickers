@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://xcp7qfxt0hfw"]
+
+[ext_resource type="TileSet" uid="uid://13j162xlh66y" path="res://Resources/TileSets/living_room.tres" id="1_do353"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_do353")
+format = 2
+layer_0/name = "Floor"
+layer_1/name = "Walls"
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Objects"
+layer_2/tile_data = PackedInt32Array()
