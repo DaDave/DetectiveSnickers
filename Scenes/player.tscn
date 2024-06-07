@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://cby6wx85gu5bq"]
+
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_8sweq"]
+[ext_resource type="SpriteFrames" uid="uid://chm1i3qp7hy34" path="res://Assets/Spritesheets/snickers_spriteframes.tres" id="2_tjtvg"]
+[ext_resource type="PackedScene" uid="uid://gda7pguu8pci" path="res://Scenes/Components/input_component.tscn" id="3_7pb2u"]
+[ext_resource type="PackedScene" uid="uid://chcm063ym44xe" path="res://Scenes/Components/movement_component.tscn" id="4_v85b2"]
+[ext_resource type="PackedScene" uid="uid://k15y10r6bpwp" path="res://Scenes/Components/animation_component.tscn" id="5_e7cyn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_auh4k"]
+radius = 8.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_component", "movement_component", "animation_component")]
+script = ExtResource("1_8sweq")
+input_component = NodePath("InputComponent")
+movement_component = NodePath("MovementComponent")
+animation_component = NodePath("AnimationComponent")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -4)
+sprite_frames = ExtResource("2_tjtvg")
+animation = &"idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_auh4k")
+
+[node name="InputComponent" parent="." instance=ExtResource("3_7pb2u")]
+
+[node name="MovementComponent" parent="." instance=ExtResource("4_v85b2")]
+
+[node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("5_e7cyn")]
+sprite = NodePath("../AnimatedSprite2D")
