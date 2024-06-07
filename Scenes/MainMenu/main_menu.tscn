@@ -14,6 +14,12 @@ grow_vertical = 2
 script = ExtResource("1_q37t8")
 levelOneScene = ExtResource("2_4r4if")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 1)
+
 [node name="VerticalBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -41,12 +47,11 @@ theme = ExtResource("3_s3eru")
 text = "Quit"
 
 [node name="Credits" type="Label" parent="."]
-visible = false
 layout_mode = 0
-offset_left = 257.0
-offset_top = 101.0
-offset_right = 619.0
-offset_bottom = 341.0
+offset_left = 198.0
+offset_top = 45.0
+offset_right = 618.0
+offset_bottom = 339.0
 theme = ExtResource("3_s3eru")
 text = "Made by
 
@@ -55,8 +60,10 @@ DaDave (Coding)
 klimagnet (Level design)
 Wara (Audio)
 
-asset pack: \"Modern interiors\" by LimeZu 
-(https://limezu.itch.io/moderninteriors)"
+assets: \"Modern interiors\" by LimeZu 
+(https://limezu.itch.io/moderninteriors)
+\"Open Font Package\" by dalton5000
+(https://godotengine.org/asset-library/asset/316)"
 horizontal_alignment = 2
 
 [connection signal="pressed" from="VerticalBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
