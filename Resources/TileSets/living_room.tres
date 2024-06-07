@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://13j162xlh66y"]
 
-[ext_resource type="Texture2D" uid="uid://dc3hnsa8snkmx" path="res://Resources/TileSets/Generic_Home_1_Layer_1_32x32.png" id="1_x33cx"]
+[ext_resource type="Texture2D" uid="uid://dewm50xc8u1qp" path="res://Resources/TileSets/Generic_Home_1_Layer_1_32x32.png" id="1_x33cx"]
 [ext_resource type="Texture2D" uid="uid://dah6kjwmt2eff" path="res://Resources/TileSets/2_LivingRoom_32x32.png" id="2_6smm2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7x1fl"]
