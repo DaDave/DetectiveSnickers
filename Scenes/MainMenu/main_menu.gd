@@ -9,7 +9,7 @@ func _on_start_button_pressed():
 
 
 func _on_credits_button_pressed():
-	$Credits.visible = !$Credits.visible
+	$CreditsLabel.visible = !$CreditsLabel.visible
 
 
 func _on_quit_button_pressed():

@@ -14,7 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_q37t8")
 levelOneScene = ExtResource("2_4r4if")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BackgroundColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
@@ -30,6 +30,7 @@ offset_top = -141.0
 offset_right = 161.0
 offset_bottom = -19.0
 grow_vertical = 0
+theme = ExtResource("3_s3eru")
 
 [node name="StartButton" type="Button" parent="VerticalBoxContainer"]
 layout_mode = 2
@@ -46,7 +47,7 @@ layout_mode = 2
 theme = ExtResource("3_s3eru")
 text = "Quit"
 
-[node name="Credits" type="Label" parent="."]
+[node name="CreditsLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 198.0
 offset_top = 45.0
