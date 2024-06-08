@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cofm0m0b3merx"]
+
+[ext_resource type="Texture2D" uid="uid://b2thq44v1urqs" path="res://Assets/Singles/CreepyPicture.png" id="1_aapvd"]
+[ext_resource type="Script" path="res://Scenes/Interactables/creepy_picture.gd" id="1_b1n5f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2nso"]
+size = Vector2(13, 24)
+
+[node name="CreepyPicture" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_b1n5f")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aapvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_g2nso")
