@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjd25dt2kr6xy"]
+
+[ext_resource type="Texture2D" uid="uid://c2yeab5gj60e7" path="res://Assets/Singles/DeadGuySuit.png" id="1_d331e"]
+[ext_resource type="Script" path="res://Scenes/Interactables/dead_guy_suit.gd" id="1_qoapw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tht2l"]
+radius = 7.0
+
+[node name="DeadGuySuit" type="StaticBody2D"]
+script = ExtResource("1_qoapw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d331e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tht2l")

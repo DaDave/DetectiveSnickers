@@ -3,12 +3,9 @@ class_name SpeechComponent extends Node
 @export_subgroup("Nodes")
 @export var speech_label: Label
 
-@export_subgroup("Settings")
-@export var text_speed: float = 0.05
-
 var is_speaking = false
 
-func speak(text: String, initial_delay: float, text_timeout: float):
+func speak(text: String, initial_delay: float, text_timeout: float, text_speed: float = 0.05):
 	await get_tree().create_timer(initial_delay).timeout
 	if !is_speaking:
 		is_speaking = true
