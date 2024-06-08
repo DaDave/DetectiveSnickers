@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://vg5fokoo2q5p"]
+[gd_scene load_steps=53 format=3 uid="uid://vg5fokoo2q5p"]
 
 [ext_resource type="Texture2D" uid="uid://c3wcoc2be535c" path="res://Resources/TileSets/24_Ice_Cream_Shop.png" id="1_002rp"]
 [ext_resource type="Texture2D" uid="uid://b5essd4akn1e5" path="res://Resources/TileSets/12_Kitchen_16x16.png" id="2_tinj6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://car3vdrh6xu8j" path="res://Resources/TileSets/14_Basement_16x16.png" id="5_n2gvj"]
 [ext_resource type="Texture2D" uid="uid://b3esunta2ox1w" path="res://Resources/TileSets/1_Generic_16x16.png" id="6_hafes"]
 [ext_resource type="Texture2D" uid="uid://bcwyveccaebf8" path="res://Resources/TileSets/3_City_Props_16x16.png" id="7_l3ywl"]
+[ext_resource type="PackedScene" uid="uid://d2hta05ggqebt" path="res://Scenes/Interactables/fridge.tscn" id="8_2ulwk"]
 [ext_resource type="PackedScene" uid="uid://cby6wx85gu5bq" path="res://Scenes/Characters/player.tscn" id="8_emdfn"]
 [ext_resource type="PackedScene" uid="uid://ciri27wpl8l7m" path="res://Scenes/PauseMenu/pause_menu.tscn" id="8_tdm6u"]
 [ext_resource type="PackedScene" uid="uid://dal68xp0s7jls" path="res://Scenes/Interactables/dead_chef.tscn" id="9_5ofv7"]
@@ -6400,18 +6401,22 @@ shape = SubResource("CircleShape2D_cujg1")
 position = Vector2(384, 307)
 shape = SubResource("CircleShape2D_cujg1")
 
-[node name="Deputy" parent="." instance=ExtResource("11_5ofaq")]
-position = Vector2(203, 216)
-deputy_text = "You think the kitchen's still open?"
+[node name="Fridge" parent="." instance=ExtResource("8_2ulwk")]
+position = Vector2(40, 40)
 
 [node name="DeadChef" parent="." instance=ExtResource("9_5ofv7")]
 position = Vector2(38, 121)
 
-[node name="Waitress" parent="." instance=ExtResource("10_3lxbp")]
-position = Vector2(233, 136)
-
 [node name="Player" parent="." instance=ExtResource("8_emdfn")]
 position = Vector2(186, 350)
+
+[node name="Deputy" parent="." instance=ExtResource("11_5ofaq")]
+position = Vector2(203, 216)
+deputy_text = "You think the kitchen's still open?"
+
+[node name="Waitress" parent="." node_paths=PackedStringArray("fridge") instance=ExtResource("10_3lxbp")]
+position = Vector2(233, 136)
+fridge = NodePath("../Fridge")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_right = 640.0

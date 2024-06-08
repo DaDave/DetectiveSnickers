@@ -1,0 +1,128 @@
+[gd_scene load_steps=18 format=3 uid="uid://d2hta05ggqebt"]
+
+[ext_resource type="Texture2D" uid="uid://v88m8axiboi8" path="res://Assets/Spritesheets/animated_fridge_grey.png" id="1_hp0hu"]
+[ext_resource type="Script" path="res://Scenes/Interactables/fridge.gd" id="1_rippo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cepdf"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oe1a"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu2a2"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b13ys"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx08u"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gq11"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7y3b"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqabv"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ifxn"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4a66"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpwwj"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7irxw"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ora20"]
+atlas = ExtResource("1_hp0hu")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1eq3x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cepdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oe1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vu2a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b13ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fx08u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gq11")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7y3b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqabv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ifxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4a66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpwwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7irxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ora20")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u52qh"]
+size = Vector2(16, 36)
+
+[node name="Fridge" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_rippo")
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 0)
+sprite_frames = SubResource("SpriteFrames_1eq3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_u52qh")
