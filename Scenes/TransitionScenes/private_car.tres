@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://dj5315xxktgqx"]
+
+[ext_resource type="Texture2D" uid="uid://bll3k0t3vr03v" path="res://Resources/TileSets/Car_classic_green_2_complete_.png" id="1_dm33u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55ag6"]
+atlas = ExtResource("1_dm33u")
+region = Rect2(672, 74, 80, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp3hv"]
+atlas = ExtResource("1_dm33u")
+region = Rect2(752, 74, 80, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vaeg"]
+atlas = ExtResource("1_dm33u")
+region = Rect2(832, 74, 80, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2ex1"]
+atlas = ExtResource("1_dm33u")
+region = Rect2(912, 74, 80, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glnx8"]
+atlas = ExtResource("1_dm33u")
+region = Rect2(992, 74, 80, 38)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55ag6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp3hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vaeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2ex1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glnx8")
+}],
+"loop": true,
+"name": &"run_left",
+"speed": 5.0
+}]
