@@ -7784,5 +7784,6 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="CaseClosedMenu" parent="VBoxContainer" instance=ExtResource("9_a00n6")]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3

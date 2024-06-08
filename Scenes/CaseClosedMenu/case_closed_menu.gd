@@ -3,7 +3,6 @@ class_name CaseClosedMenu
 extends Control
 
 func _ready():
-	SignalBus.pause_menu_initiated.emit(self)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _on_continue_button_pressed():
