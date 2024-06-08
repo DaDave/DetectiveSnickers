@@ -79,6 +79,7 @@ assets: \"Modern interiors\" by LimeZu
 horizontal_alignment = 2
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_6jdkc")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="VerticalBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
