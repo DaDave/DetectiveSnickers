@@ -21,8 +21,10 @@ func pause():
 	if isPaused:
 		pause_menu_instance.hide()
 		Engine.time_scale = 1
+		get_tree().paused = false
 	else:
 		pause_menu_instance.show()
 		Engine.time_scale = 0
+		get_tree().paused = true
 	
 	isPaused = !isPaused
