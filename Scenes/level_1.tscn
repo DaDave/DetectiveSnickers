@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://xcp7qfxt0hfw"]
+[gd_scene load_steps=15 format=3 uid="uid://xcp7qfxt0hfw"]
 
 [ext_resource type="Texture2D" uid="uid://m0qbwfmg1360" path="res://Resources/TileSets/Generic_Home_1_Layer_1.png" id="1_23jxi"]
 [ext_resource type="Texture2D" uid="uid://cs5ftirig1egw" path="res://Resources/TileSets/2_LivingRoom_16x16.png" id="2_xqlvj"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://xdth7ek4qxm7" path="res://Scenes/Characters/deputy.tscn" id="7_gbvdh"]
 [ext_resource type="PackedScene" uid="uid://ciri27wpl8l7m" path="res://Scenes/PauseMenu/pause_menu.tscn" id="8_rd7ov"]
 [ext_resource type="PackedScene" uid="uid://2mgqcrq2mmoq" path="res://Scenes/Interactables/flower_pot.tscn" id="9_40q3b"]
+[ext_resource type="PackedScene" uid="uid://w8iw35kh450x" path="res://Scenes/CaseClosedMenu/case_closed_menu.tscn" id="9_a00n6"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7wpt"]
 texture = ExtResource("1_23jxi")
@@ -7799,6 +7801,11 @@ offset_right = 640.0
 offset_bottom = 360.0
 
 [node name="PauseMenu" parent="VBoxContainer" instance=ExtResource("8_rd7ov")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CaseClosedMenu" parent="VBoxContainer" instance=ExtResource("9_a00n6")]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
