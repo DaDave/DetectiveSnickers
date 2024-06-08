@@ -8,9 +8,9 @@ class_name FlowerPot extends StaticBody2D
 @export_subgroup("Settings")
 @export var fall_height: float = 10.0
 @export var progress_step: float = 3.0
-@export var deputy_text: String = "You are brilliant, Detective Snickers! That's how it happened!"
-@export var deputy_text2: String = "The victim must have bumped into the shelf and the vase fell on his head!"
-@export var deputy_text3: String = "With your brilliant skills of deduction you almost make our job look effortless"
+@export var deputy_text = "You are brilliant, Detective Snickers!\nThat's how it happened!"
+@export var deputy_text2 = "The victim must have bumped into the shelf\n and the vase fell on his head!"
+@export var deputy_text3 = "With your brilliant skills of deduction\n you almost make our job look effortless"
 
 var _should_fall = false
 var _on_ground = false
