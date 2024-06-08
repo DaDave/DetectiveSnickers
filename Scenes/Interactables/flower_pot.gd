@@ -41,7 +41,7 @@ func handle_on_ground():
 	#var text_speed = 0.05
 	#var text1_time = Utility.calculate_speak_time(deputy_text, text_speed)
 	#var text2_time = Utility.calculate_speak_time(deputy_text2, text_speed)
-##
+
 	#SpeechSignalBus.deputy_speak.emit(deputy_text, 0.0, 1.5)
 	#await get_tree().create_timer(text1_time+0.2).timeout
 	#SpeechSignalBus.deputy_speak.emit(deputy_text2, 0.0, 1.5)

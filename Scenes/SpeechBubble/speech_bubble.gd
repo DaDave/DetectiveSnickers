@@ -45,5 +45,6 @@ func _on_Timer_timeout():
 			
 			timer.start(0.04)
 		else:
+			SpeechSignalBus.speech_finished.emit()
 			initiateValues()
 			self.hide()
