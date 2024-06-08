@@ -1,19 +1,29 @@
+class_name SpeechBubble
+
 extends Node2D
 
+var bubble_text = ""
 var bubble_text_length = 0
 var bubble_text_index = 0
 var current_text = ""
-
-var bubble_text = "I AM DETECTIVE SNICKERS"
-@onready var speech_label : Label= get_node("VerticalBoxContainer/SpeechLabel")
-@onready var speech_nine_patch_rect : NinePatchRect = get_node("VerticalBoxContainer/SpeechLabel/SpeechNinePatchRect")
-@onready var timer : Timer = get_node("Timer")
-
 var should_close = false
 
-func start_speech_bubble(bubble_text):
+@onready var speech_label : Label= get_node("VerticalBoxContainer/SpeechLabel")
+@onready var timer : Timer = get_node("Timer")
+
+func start_speech_bubble(input_text):
+	bubble_text = input_text
 	bubble_text_length = bubble_text.length()
-	timer.start(1)
+	self.show()
+	timer.start(0.5)
+	
+func initiateValues():
+	bubble_text = ""
+	bubble_text_length = 0
+	bubble_text_index = 0
+	current_text = ""
+	speech_label.text = ""
+	should_close = false
 
 func _on_Timer_timeout():
 	if(!should_close):
@@ -35,4 +45,5 @@ func _on_Timer_timeout():
 			
 			timer.start(0.04)
 		else:
-			queue_free()
+			initiateValues()
+			self.hide()
