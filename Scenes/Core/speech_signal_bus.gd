@@ -1,3 +1,3 @@
 extends Node
 
-signal deputy_speak(text: String, initial_delay: float, text_timeout: float, text_speed: float)
+signal deputy_speak(text: String, initial_delay: float)

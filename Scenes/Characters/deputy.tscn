@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://xdth7ek4qxm7"]
+[gd_scene load_steps=19 format=3 uid="uid://xdth7ek4qxm7"]
 
 [ext_resource type="Texture2D" uid="uid://b4wxfl1u6pqtt" path="res://Assets/Spritesheets/raider_16.png" id="1_cnyd1"]
 [ext_resource type="Script" path="res://Scenes/Characters/deputy.gd" id="1_h5cxq"]
 [ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="2_23q2g"]
+[ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_xub76"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8mpg"]
 atlas = ExtResource("1_cnyd1")
@@ -116,11 +117,9 @@ animation = &"idle_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8g5v0")
 
-[node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_label") instance=ExtResource("2_23q2g")]
-speech_label = NodePath("../Label")
+[node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("2_23q2g")]
+speech_bubble = NodePath("../SpeechBubble")
 
-[node name="Label" type="Label" parent="."]
-offset_left = -50.0
-offset_top = -44.0
-offset_right = -10.0
-offset_bottom = -21.0
+[node name="SpeechBubble" parent="." instance=ExtResource("4_xub76")]
+visible = false
+position = Vector2(-23, -38)

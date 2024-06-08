@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnns10i1qvg63"]
+
+[ext_resource type="Script" path="res://Scenes/SpeechBubble/speech_bubble.gd" id="1_f3thj"]
+[ext_resource type="Theme" uid="uid://dxxcqron0p625" path="res://Resources/UITheme/UITheme.tres" id="1_ylf1r"]
+[ext_resource type="Texture2D" uid="uid://bw341mgpvbfnn" path="res://Scenes/SpeechBubble/speech_bubble_background.png" id="2_b34u2"]
+
+[node name="SpeechBubble" type="Node2D"]
+script = ExtResource("1_f3thj")
+
+[node name="VerticalBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpeechLabel" type="Label" parent="VerticalBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_ylf1r")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SpeechNinePatchRect" type="NinePatchRect" parent="VerticalBoxContainer/SpeechLabel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b34u2")
+patch_margin_left = 18
+patch_margin_top = 11
+patch_margin_right = 18
+patch_margin_bottom = 10
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

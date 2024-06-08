@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cby6wx85gu5bq"]
+[gd_scene load_steps=9 format=3 uid="uid://cby6wx85gu5bq"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/player.gd" id="1_8sweq"]
 [ext_resource type="SpriteFrames" uid="uid://chm1i3qp7hy34" path="res://Assets/Spritesheets/snickers_spriteframes.tres" id="2_tjtvg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chcm063ym44xe" path="res://Scenes/Components/movement_component.tscn" id="4_v85b2"]
 [ext_resource type="PackedScene" uid="uid://k15y10r6bpwp" path="res://Scenes/Components/animation_component.tscn" id="5_e7cyn"]
 [ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="6_vsmh3"]
+[ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="7_fdrfn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iunm8"]
 radius = 5.0
@@ -32,11 +33,9 @@ shape = SubResource("CircleShape2D_iunm8")
 [node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("5_e7cyn")]
 sprite = NodePath("../AnimatedSprite2D")
 
-[node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_label") instance=ExtResource("6_vsmh3")]
-speech_label = NodePath("../Label")
+[node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("6_vsmh3")]
+speech_bubble = NodePath("../SpeechBubble")
 
-[node name="Label" type="Label" parent="."]
-offset_left = -46.0
-offset_top = -46.0
-offset_right = -6.0
-offset_bottom = -23.0
+[node name="SpeechBubble" parent="." instance=ExtResource("7_fdrfn")]
+visible = false
+position = Vector2(-23, -38)
