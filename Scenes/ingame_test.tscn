@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8k0dt26eo0mt"]
 
 [ext_resource type="TileSet" uid="uid://swv1xgfl0j8h" path="res://Resources/TileSets/living_room_16.tres" id="1_upf57"]
-[ext_resource type="PackedScene" uid="uid://cby6wx85gu5bq" path="res://Scenes/player.tscn" id="2_5134u"]
+[ext_resource type="PackedScene" uid="uid://cby6wx85gu5bq" path="res://Scenes/Characters/player.tscn" id="2_5134u"]
 
 [node name="IngameTest" type="Node2D"]
 
