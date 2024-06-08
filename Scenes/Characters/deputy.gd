@@ -10,5 +10,5 @@ func _ready():
 func interact():
 	SpeechSignalBus.queue_speech.emit(speech_component, "I know...")
 
-func _on_deputy_speak(text: String, initial_delay: float):
+func _on_deputy_speak(text: String):
 	SpeechSignalBus.queue_speech.emit(speech_component, text)

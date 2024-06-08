@@ -6,6 +6,7 @@ var isPaused : bool = false
 func _ready():
 	SignalBus.pause_menu_initiated.connect(_onPauseMenuInitiated)
 	SignalBus.pause_requested.connect(_onPauseRequested)
+	SignalBus.case_closed.connect(_on_case_closed)
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
@@ -17,6 +18,9 @@ func _onPauseRequested():
 func _onPauseMenuInitiated(pause_menu: PauseMenu):
 	pause_menu_instance = pause_menu
 	
+func _on_case_closed():
+	pass # Hier Case Closed Scene klarmachen
+
 func pause():
 	if isPaused:
 		pause_menu_instance.hide()

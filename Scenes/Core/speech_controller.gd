@@ -23,3 +23,4 @@ func next_speech():
 		next_speech["component"].speak(next_speech["text"], 0.0)
 	else:
 		_is_speaking = false
+		SpeechSignalBus.speech_queue_finished.emit()
