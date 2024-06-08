@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 MainSingleton="*res://Scenes/Core/main_singleton.gd"
 SignalBus="*res://Scenes/Core/signal_bus.gd"
 SceneSwitcherSingleton="*res://Scenes/Core/scene_switcher_singleton.gd"
+SpeechSignalBus="*res://Scenes/Core/speech_signal_bus.gd"
 
 [display]
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://xcp7qfxt0hfw"]
+[gd_scene load_steps=16 format=3 uid="uid://xcp7qfxt0hfw"]
 
-[ext_resource type="Texture2D" uid="uid://bj2hu6i47s0lb" path="res://Resources/TileSets/Generic_Home_1_Layer_1.png" id="1_23jxi"]
+[ext_resource type="Texture2D" uid="uid://m0qbwfmg1360" path="res://Resources/TileSets/Generic_Home_1_Layer_1.png" id="1_23jxi"]
 [ext_resource type="Texture2D" uid="uid://cs5ftirig1egw" path="res://Resources/TileSets/2_LivingRoom_16x16.png" id="2_xqlvj"]
 [ext_resource type="Texture2D" uid="uid://b3esunta2ox1w" path="res://Resources/TileSets/1_Generic_16x16.png" id="3_0ie1i"]
 [ext_resource type="Texture2D" uid="uid://car3vdrh6xu8j" path="res://Resources/TileSets/14_Basement_16x16.png" id="4_77hsj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bepnglsyir4sg" path="res://Scenes/Interactables/television.tscn" id="6_g4p3e"]
 [ext_resource type="PackedScene" uid="uid://xdth7ek4qxm7" path="res://Scenes/Characters/deputy.tscn" id="7_gbvdh"]
 [ext_resource type="PackedScene" uid="uid://ciri27wpl8l7m" path="res://Scenes/PauseMenu/pause_menu.tscn" id="8_rd7ov"]
+[ext_resource type="PackedScene" uid="uid://2mgqcrq2mmoq" path="res://Scenes/Interactables/flower_pot.tscn" id="9_40q3b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7wpt"]
 texture = ExtResource("1_23jxi")
@@ -7750,6 +7751,12 @@ sources/1 = SubResource("TileSetAtlasSource_olv44")
 sources/2 = SubResource("TileSetAtlasSource_ww7in")
 sources/3 = SubResource("TileSetAtlasSource_qsm30")
 
+[sub_resource type="Curve2D" id="Curve2D_lcjm2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 1, 0, 0, 0, 0, 12, 4, 0, 0, 0, 0, 16, 10, 0, 0, 0, 0, 18, 17, 0, 0, 0, 0, 19, 26, 0, 0, 0, 0, 19, 34)
+}
+point_count = 7
+
 [node name="Level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -7767,11 +7774,25 @@ layer_3/tile_data = PackedInt32Array(589844, 65537, 24, 655380, 65537, 25, 45875
 [node name="Television" parent="." instance=ExtResource("6_g4p3e")]
 position = Vector2(88, 18)
 
+[node name="FlowerPotTrajectory" type="Path2D" parent="."]
+position = Vector2(169, 218)
+curve = SubResource("Curve2D_lcjm2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="FlowerPotTrajectory"]
+rotation = 0.141897
+loop = false
+
+[node name="FlowerPot" parent="FlowerPotTrajectory/PathFollow2D" node_paths=PackedStringArray("path_follow") instance=ExtResource("9_40q3b")]
+position = Vector2(-4.29153e-06, 9.53674e-07)
+rotation = -0.141897
+scale = Vector2(1, 1)
+path_follow = NodePath("..")
+
 [node name="Deputy" parent="." instance=ExtResource("7_gbvdh")]
 position = Vector2(267, 168)
 
 [node name="Player" parent="." instance=ExtResource("5_3nmi8")]
-position = Vector2(321, 328)
+position = Vector2(143, 185)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_right = 640.0

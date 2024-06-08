@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://2mgqcrq2mmoq"]
+
+[ext_resource type="Script" path="res://Scenes/Interactables/flower_pot.gd" id="1_dt615"]
+[ext_resource type="Texture2D" uid="uid://dphqneauv7n4" path="res://Assets/Singles/FlowerPot.png" id="2_6k11j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1no7"]
+size = Vector2(8, 31)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3noug"]
+radius = 4.0
+
+[node name="FlowerPot" type="StaticBody2D" node_paths=PackedStringArray("collision_shelf", "collision_ground")]
+script = ExtResource("1_dt615")
+collision_shelf = NodePath("CollisionShelf")
+collision_ground = NodePath("CollisionGround")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6k11j")
+
+[node name="CollisionShelf" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_t1no7")
+
+[node name="CollisionGround" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_3noug")
