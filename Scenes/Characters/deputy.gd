@@ -8,7 +8,7 @@ func _ready():
 	SpeechSignalBus.deputy_speak.connect(_on_deputy_speak)
 
 func interact():
-	speech_component.speak("I know...", 2.3, 0.5)
+	speech_component.speak("I know...", 2.3)
 
-func _on_deputy_speak(text: String, initial_delay: float, text_timeout: float):
-	speech_component.speak(text, initial_delay, text_timeout)
+func _on_deputy_speak(text: String, initial_delay: float):
+	speech_component.speak(text, initial_delay)
