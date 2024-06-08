@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://xcp7qfxt0hfw"]
+[gd_scene load_steps=17 format=3 uid="uid://xcp7qfxt0hfw"]
 
-[ext_resource type="Texture2D" uid="uid://m0qbwfmg1360" path="res://Resources/TileSets/Generic_Home_1_Layer_1.png" id="1_23jxi"]
+[ext_resource type="Texture2D" uid="uid://bj2hu6i47s0lb" path="res://Resources/TileSets/Generic_Home_1_Layer_1.png" id="1_23jxi"]
 [ext_resource type="Texture2D" uid="uid://cs5ftirig1egw" path="res://Resources/TileSets/2_LivingRoom_16x16.png" id="2_xqlvj"]
 [ext_resource type="Texture2D" uid="uid://b3esunta2ox1w" path="res://Resources/TileSets/1_Generic_16x16.png" id="3_0ie1i"]
 [ext_resource type="Texture2D" uid="uid://car3vdrh6xu8j" path="res://Resources/TileSets/14_Basement_16x16.png" id="4_77hsj"]
@@ -8,9 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bepnglsyir4sg" path="res://Scenes/Interactables/television.tscn" id="6_g4p3e"]
 [ext_resource type="PackedScene" uid="uid://xdth7ek4qxm7" path="res://Scenes/Characters/deputy.tscn" id="7_gbvdh"]
 [ext_resource type="PackedScene" uid="uid://ciri27wpl8l7m" path="res://Scenes/PauseMenu/pause_menu.tscn" id="8_rd7ov"]
-[ext_resource type="PackedScene" uid="uid://2mgqcrq2mmoq" path="res://Scenes/Interactables/flower_pot.tscn" id="9_40q3b"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/flower_pot.tscn" id="9_40q3b"]
 [ext_resource type="PackedScene" uid="uid://w8iw35kh450x" path="res://Scenes/CaseClosedMenu/case_closed_menu.tscn" id="9_a00n6"]
-
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7wpt"]
 texture = ExtResource("1_23jxi")
@@ -7787,7 +7786,6 @@ loop = false
 [node name="FlowerPot" parent="FlowerPotTrajectory/PathFollow2D" node_paths=PackedStringArray("path_follow") instance=ExtResource("9_40q3b")]
 position = Vector2(-4.29153e-06, 9.53674e-07)
 rotation = -0.141897
-scale = Vector2(1, 1)
 path_follow = NodePath("..")
 
 [node name="Deputy" parent="." instance=ExtResource("7_gbvdh")]
