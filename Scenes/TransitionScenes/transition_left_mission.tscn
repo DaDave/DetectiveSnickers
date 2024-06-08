@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bqmprck8txk4d" path="res://Scenes/TransitionScenes/police_car.tscn" id="2_fcea5"]
 [ext_resource type="TileSet" uid="uid://dpevqka2k5i7i" path="res://Resources/TileSets/lvls.tres" id="3_cl6ry"]
 
-[node name="TransitionLeftMission2" type="Node2D"]
+[node name="TransitionLeftMission" type="Node2D"]
 script = ExtResource("1_jlbjq")
 
 [node name="PoliceCar" parent="." instance=ExtResource("2_fcea5")]
