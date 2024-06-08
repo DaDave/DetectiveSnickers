@@ -4,6 +4,7 @@ class_name Player extends CharacterBody2D
 @export var input_component: InputComponent
 @export var movement_component: MovementComponent
 @export var animation_component: AnimationComponent
+@export var speech_component: SpeechComponent
 
 func _physics_process(delta):
 	movement_component.handle_movement(self, input_component.input_horizontal, input_component.input_vertical)
@@ -14,6 +15,7 @@ func _physics_process(delta):
 		var collider = get_slide_collision(i).get_collider()
 		print("I collided with ", collider.name)
 		if collider.has_method("interact") && input_component.wants_to_interact():
+			speech_component.speak("I'M DETECTIVE SNICKERS!")
 			collider.interact()
 		
 
