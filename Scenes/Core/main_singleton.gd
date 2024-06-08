@@ -22,8 +22,6 @@ func _onPauseMenuInitiated(pause_menu: PauseMenu):
 	
 func _onCaseClosed():
 	case_closed.show()
-	Engine.time_scale = 0
-	get_tree().paused = true
 
 func _onCaseClosedMenuInitiated(_case_closed: CaseClosedMenu):
 	case_closed = _case_closed

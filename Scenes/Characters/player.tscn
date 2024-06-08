@@ -21,7 +21,7 @@ speech_component = NodePath("SpeechComponent")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = ExtResource("2_tjtvg")
-animation = &"idle_down"
+animation = &"show_card_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_iunm8")

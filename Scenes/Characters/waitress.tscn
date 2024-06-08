@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dd25pdbbgilvr"]
+
+[ext_resource type="SpriteFrames" uid="uid://4jexi63653cn" path="res://Assets/Spritesheets/waitress.tres" id="1_c2sad"]
+[ext_resource type="Script" path="res://Scenes/Characters/waitress.gd" id="1_no3oj"]
+[ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="3_rmwdo"]
+[ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_1lewi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v04vi"]
+radius = 5.0
+
+[node name="Waitress" type="CharacterBody2D" node_paths=PackedStringArray("speech_component")]
+script = ExtResource("1_no3oj")
+speech_component = NodePath("SpeechComponent")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -11)
+sprite_frames = ExtResource("1_c2sad")
+animation = &"idle_down"
+frame = 4
+frame_progress = 0.445298
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v04vi")
+
+[node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("3_rmwdo")]
+speech_bubble = NodePath("../SpeechBubble")
+
+[node name="SpeechBubble" parent="." instance=ExtResource("4_1lewi")]
+visible = false
+position = Vector2(-27, -40)

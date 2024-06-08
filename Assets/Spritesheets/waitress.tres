@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://4jexi63653cn"]
+
+[ext_resource type="Texture2D" uid="uid://bulhhn3qpemap" path="res://Assets/Spritesheets/waitress.png" id="1_8nw1u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uudnt"]
+atlas = ExtResource("1_8nw1u")
+region = Rect2(288, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g4rn"]
+atlas = ExtResource("1_8nw1u")
+region = Rect2(304, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j182d"]
+atlas = ExtResource("1_8nw1u")
+region = Rect2(320, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p6mv"]
+atlas = ExtResource("1_8nw1u")
+region = Rect2(336, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxcvk"]
+atlas = ExtResource("1_8nw1u")
+region = Rect2(352, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yphyv"]
+atlas = ExtResource("1_8nw1u")
+region = Rect2(368, 32, 16, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uudnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g4rn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j182d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p6mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxcvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yphyv")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
