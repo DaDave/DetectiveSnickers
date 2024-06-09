@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=88 format=3 uid="uid://chm1i3qp7hy34"]
 
 [ext_resource type="Texture2D" uid="uid://bnbvwrf5h76fw" path="res://Assets/Spritesheets/snickers.png" id="1_yghxv"]
-[ext_resource type="Texture2D" path="res://Assets/Spritesheets/snickers pass-sheet.png" id="2_acunh"]
+[ext_resource type="Texture2D" uid="uid://dnp1mion8tr0e" path="res://Assets/Spritesheets/snickers pass-sheet.png" id="2_acunh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4yn7e"]
 atlas = ExtResource("1_yghxv")

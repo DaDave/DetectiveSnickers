@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cixg3xwh6vabp"]
+[gd_scene load_steps=6 format=3 uid="uid://cixg3xwh6vabp"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScenes/transition_right_mission.gd" id="1_04uj5"]
 [ext_resource type="PackedScene" uid="uid://bqmprck8txk4d" path="res://Scenes/TransitionScenes/police_car.tscn" id="2_5n56n"]
 [ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="3_g1en7"]
 [ext_resource type="AudioStream" uid="uid://b2ekhi3x148l8" path="res://Assets/Music/driving_mission_music.wav" id="4_nopqi"]
+[ext_resource type="AudioStream" uid="uid://bj0kibwykjr08" path="res://Assets/Music/police_horn.wav" id="5_pf35l"]
 
 [node name="TransitionRightMission" type="Node2D" node_paths=PackedStringArray("police_car")]
 script = ExtResource("1_04uj5")
@@ -38,3 +39,7 @@ layer_2/tile_data = PackedInt32Array(589979, 1310733, 87, 589980, 1376269, 87, 5
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_nopqi")
 autoplay = true
+max_polyphony = 2
+
+[node name="HornAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_pf35l")
