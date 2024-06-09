@@ -6223,6 +6223,7 @@ size = Vector2(18, 29)
 size = Vector2(16.5, 29)
 
 [node name="Level2" type="Node2D"]
+position = Vector2(15, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wls7s")
@@ -6425,6 +6426,9 @@ Maybe there's some food left in the fridge?"
 [node name="Waitress" parent="." node_paths=PackedStringArray("fridge") instance=ExtResource("10_3lxbp")]
 position = Vector2(233, 136)
 fridge = NodePath("../Fridge")
+deputy_confession_text = "I don't know how you do it, Detective Snickers.
+You must be the most competent Detective
+in the history of solving murders."
 
 [node name="GuestA" parent="." instance=ExtResource("12_0ltlx")]
 position = Vector2(409, 54)

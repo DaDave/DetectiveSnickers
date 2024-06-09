@@ -409,8 +409,13 @@ position = Vector2(121, 123)
 position = Vector2(180, 123)
 
 [node name="GymBroA" parent="." node_paths=PackedStringArray("poison_bottle") instance=ExtResource("6_c6esy")]
-position = Vector2(256, 70)
+position = Vector2(161, 186)
 poison_bottle = NodePath("../PoisonBottle")
+confession_text2 = "Last week he put salt into my protein shake.
+I just pranked him back."
+confession_text3 = "I didn't know the bleach would kill him.
+I read on the internet that it could cure
+all kinds of stuff"
 
 [node name="GymBroB" parent="." instance=ExtResource("7_y5hqo")]
 position = Vector2(209, 83)

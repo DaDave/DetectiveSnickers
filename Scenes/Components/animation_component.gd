@@ -24,8 +24,6 @@ func handle_move_animation(direction_horizontal: float, direction_vertical: floa
 	elif down:
 		if direction_vertical != 0: sprite.play("run_down")
 		else: sprite.play("idle_down")
-
-
 	
 	up = direction_vertical < 0
 	down = direction_vertical > 0
