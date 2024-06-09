@@ -31,7 +31,7 @@ speech_bubble = NodePath("../SnickersSpeechBubble")
 
 [node name="SnickersSpeechBubble" parent="." instance=ExtResource("4_qk5al")]
 visible = false
-position = Vector2(-23, -38)
+position = Vector2(-80, -119)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -10.5)
@@ -44,6 +44,7 @@ speech_bubble = NodePath("../RiderSpeechBubble")
 
 [node name="RiderSpeechBubble" parent="." instance=ExtResource("4_qk5al")]
 visible = false
+position = Vector2(69, -120)
 
 [node name="HornAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_uknfj")

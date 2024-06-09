@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cngyp6ii0dwfr"]
+[gd_scene load_steps=26 format=3 uid="uid://0087utw1cc6a"]
 
 [ext_resource type="Script" path="res://Scenes/Interactables/punching_bag.gd" id="1_aoltr"]
 [ext_resource type="Texture2D" uid="uid://bj1l2gde2w1e" path="res://Assets/Spritesheets/animated_punching_bag_left.png" id="1_toanr"]
