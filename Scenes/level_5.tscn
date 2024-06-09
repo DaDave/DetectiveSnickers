@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkjfiu66v45q0"]
+[gd_scene load_steps=2 format=3 uid="uid://bcdaeclkweug7"]
 
-[ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="1_36tia"]
+[ext_resource type="TileSet" uid="uid://dpevqka2k5i7i" path="res://Resources/TileSets/lvls.tres" id="1_36tia"]
 
 [node name="level_5" type="Node2D"]
 

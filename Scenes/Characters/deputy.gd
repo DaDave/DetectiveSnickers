@@ -5,7 +5,7 @@ class_name Deputy extends CharacterBody2D
 @export var sprite: AnimatedSprite2D
 
 @export_subgroup("Settings")
-@export var deputy_text: String = "I know..."
+@export_multiline var deputy_text: String = "I know..."
 
 
 func _ready():

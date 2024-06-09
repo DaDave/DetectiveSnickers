@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://cm1so5yiscf7i"]
+
+[ext_resource type="Texture2D" uid="uid://b46pw4axuj47k" path="res://Assets/Spritesheets/gymbro_a.png" id="1_4a3fs"]
+[ext_resource type="Script" path="res://Scenes/Characters/gym_bro_a.gd" id="1_stnkh"]
+[ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="3_4spfm"]
+[ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_214n3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohfbo"]
+atlas = ExtResource("1_4a3fs")
+region = Rect2(288, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cojl0"]
+atlas = ExtResource("1_4a3fs")
+region = Rect2(304, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tr36j"]
+atlas = ExtResource("1_4a3fs")
+region = Rect2(320, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p02jd"]
+atlas = ExtResource("1_4a3fs")
+region = Rect2(336, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1nmy"]
+atlas = ExtResource("1_4a3fs")
+region = Rect2(352, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmaqw"]
+atlas = ExtResource("1_4a3fs")
+region = Rect2(368, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckydu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohfbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cojl0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tr36j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p02jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1nmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmaqw")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r78ac"]
+size = Vector2(14, 9)
+
+[node name="GymBroA" type="CharacterBody2D" node_paths=PackedStringArray("speech_component", "sprite")]
+script = ExtResource("1_stnkh")
+speech_component = NodePath("SpeechComponent")
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_ckydu")
+animation = &"idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_r78ac")
+
+[node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("3_4spfm")]
+speech_bubble = NodePath("../SpeechBubble")
+
+[node name="SpeechBubble" parent="." instance=ExtResource("4_214n3")]
+visible = false
+position = Vector2(-26, -36)
