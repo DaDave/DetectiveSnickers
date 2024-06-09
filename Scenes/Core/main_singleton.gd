@@ -3,6 +3,7 @@ extends Node
 var pause_menu_instance : PauseMenu = null
 var case_closed: CaseClosedMenu
 var isPaused : bool = false
+var transition_counter = 0
 
 func _ready():
 	SignalBus.pause_menu_initiated.connect(_onPauseMenuInitiated)

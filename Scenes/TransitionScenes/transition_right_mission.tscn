@@ -5,8 +5,9 @@
 [ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="3_g1en7"]
 [ext_resource type="AudioStream" uid="uid://b2ekhi3x148l8" path="res://Assets/Music/driving_mission_music.wav" id="4_nopqi"]
 
-[node name="TransitionRightMission" type="Node2D"]
+[node name="TransitionRightMission" type="Node2D" node_paths=PackedStringArray("police_car")]
 script = ExtResource("1_04uj5")
+police_car = NodePath("PoliceCar")
 
 [node name="PoliceCar" parent="." instance=ExtResource("2_5n56n")]
 position = Vector2(340, 299)

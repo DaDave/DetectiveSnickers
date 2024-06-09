@@ -11,10 +11,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybflj"]
 size = Vector2(92, 39)
 
-[node name="PoliceCar" type="CharacterBody2D" node_paths=PackedStringArray("movement_component", "animation_component")]
+[node name="PoliceCar" type="CharacterBody2D" node_paths=PackedStringArray("movement_component", "animation_component", "snickers_speech", "raider_speech")]
 script = ExtResource("1_tou4u")
 movement_component = NodePath("MovementComponent")
 animation_component = NodePath("AnimationComponent")
+snickers_speech = NodePath("SnickersSpeechComponent")
+raider_speech = NodePath("RiderSpeechComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -13)

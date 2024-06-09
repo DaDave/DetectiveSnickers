@@ -23,6 +23,7 @@ SceneSwitcherSingleton="*res://Scenes/Core/scene_switcher_singleton.gd"
 SpeechSignalBus="*res://Scenes/Core/speech_signal_bus.gd"
 Utility="*res://Scenes/Core/utility.gd"
 SpeechController="*res://Scenes/Core/speech_controller.gd"
+InputSingleton="*res://Scenes/Core/input_singleton.gd"
 
 [display]
 
