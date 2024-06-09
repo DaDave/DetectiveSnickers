@@ -1,25 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqmprck8txk4d"]
+[gd_scene load_steps=9 format=3 uid="uid://bqmprck8txk4d"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScenes/police_car.gd" id="1_tou4u"]
-[ext_resource type="SpriteFrames" uid="uid://dj5315xxktgqx" path="res://Scenes/TransitionScenes/private_car.tres" id="2_0c0ct"]
+[ext_resource type="SpriteFrames" uid="uid://dxku00oidp5t2" path="res://Scenes/TransitionScenes/police_car.tres" id="2_c2kaw"]
 [ext_resource type="PackedScene" uid="uid://k15y10r6bpwp" path="res://Scenes/Components/animation_component.tscn" id="2_xoh58"]
 [ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="3_bo0xc"]
 [ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_qk5al"]
 [ext_resource type="PackedScene" uid="uid://chcm063ym44xe" path="res://Scenes/Components/movement_component.tscn" id="6_7bcyq"]
+[ext_resource type="AudioStream" uid="uid://bj0kibwykjr08" path="res://Assets/Music/police_horn.wav" id="7_uknfj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybflj"]
 size = Vector2(92, 39)
 
-[node name="PoliceCar" type="CharacterBody2D" node_paths=PackedStringArray("movement_component", "animation_component", "snickers_speech", "raider_speech")]
+[node name="PoliceCar" type="CharacterBody2D" node_paths=PackedStringArray("movement_component", "animation_component")]
 script = ExtResource("1_tou4u")
 movement_component = NodePath("MovementComponent")
 animation_component = NodePath("AnimationComponent")
-snickers_speech = NodePath("SnickersSpeechComponent")
-raider_speech = NodePath("RiderSpeechComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -13)
-sprite_frames = ExtResource("2_0c0ct")
+sprite_frames = ExtResource("2_c2kaw")
 animation = &"run_left"
 
 [node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_xoh58")]
@@ -43,3 +42,6 @@ speech_bubble = NodePath("../RiderSpeechBubble")
 
 [node name="RiderSpeechBubble" parent="." instance=ExtResource("4_qk5al")]
 visible = false
+
+[node name="HornAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_uknfj")
