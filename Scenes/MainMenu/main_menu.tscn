@@ -34,6 +34,7 @@ grow_vertical = 2
 script = ExtResource("1_q37t8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 energy = 0.7
 blend_mode = 1
 
@@ -81,7 +82,7 @@ anchors_preset = -1
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 22.0
-offset_top = -141.0
+offset_top = -147.0
 offset_right = 161.0
 offset_bottom = -19.0
 grow_vertical = 0
