@@ -14,7 +14,7 @@ config/name="Detective Snickers"
 config/version="1.0"
 run/main_scene="res://Scenes/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Logo.png"
 
 [autoload]
 

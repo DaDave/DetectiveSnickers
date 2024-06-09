@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://xcp7qfxt0hfw"]
 
-[ext_resource type="Texture2D" uid="uid://bj2hu6i47s0lb" path="res://Resources/TileSets/Generic_Home_1_Layer_1.png" id="1_23jxi"]
+[ext_resource type="Texture2D" uid="uid://m0qbwfmg1360" path="res://Resources/TileSets/Generic_Home_1_Layer_1.png" id="1_23jxi"]
 [ext_resource type="Texture2D" uid="uid://cs5ftirig1egw" path="res://Resources/TileSets/2_LivingRoom_16x16.png" id="2_xqlvj"]
 [ext_resource type="Texture2D" uid="uid://b3esunta2ox1w" path="res://Resources/TileSets/1_Generic_16x16.png" id="3_0ie1i"]
 [ext_resource type="Texture2D" uid="uid://car3vdrh6xu8j" path="res://Resources/TileSets/14_Basement_16x16.png" id="4_77hsj"]
