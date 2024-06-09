@@ -1,6 +1,7 @@
-extends Node2D
+class_name TransitionRightMission extends Node2D
 
+@export_subgroup("Nodes")
+@export var police_car: PoliceCar
 
-func _ready():
-	pass # Replace with function body.
-
+func first_transition():
+	police_car.deputy_speak("Hi")

@@ -3,6 +3,7 @@ extends Node
 var current_scene = null
 var scene_path_array = [
 	"res://Scenes/MainMenu/main_menu.tscn",
+	"res://Scenes/TransitionScenes/transition_right_mission.tscn",
 	"res://Scenes/level_1.tscn",
 	"res://Scenes/level_2.tscn",
 	"res://Scenes/level_3.tscn",

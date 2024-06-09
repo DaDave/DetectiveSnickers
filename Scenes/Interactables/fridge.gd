@@ -5,7 +5,7 @@ class_name Fridge extends StaticBody2D
 
 @export_subgroup("Settings")
 @export var deputy_text = "Is that a bloody knife in the fridge?"
-@export var deputy_text2 = "That's really impressive, Detective Snickers!\nWho would've thought we'd find the murder weapon\nin there?"
+@export var deputy_text2 = "That's really impressive, Detective Snickers!\nWho would've thought we'd find the murder\nweapon in there?"
 @export var deputy_text3 = "But who put it there?"
 
 var is_open = false

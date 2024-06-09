@@ -6412,7 +6412,8 @@ position = Vector2(38, 121)
 
 [node name="Deputy" parent="." instance=ExtResource("11_5ofaq")]
 position = Vector2(203, 216)
-deputy_text = "You think the kitchen's still open?"
+deputy_text = "You think the kitchen's still open?
+Maybe there's some food left in the fridge?"
 
 [node name="Waitress" parent="." node_paths=PackedStringArray("fridge") instance=ExtResource("10_3lxbp")]
 position = Vector2(233, 136)
