@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://dyvgpxd0rqg44"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_q37t8"]
-[ext_resource type="TileSet" uid="uid://cvdu6gcvgaknx" path="res://Scenes/MainMenu/main_menu.tres" id="2_svuy1"]
+[ext_resource type="TileSet" uid="uid://to6k021s4uct" path="res://Scenes/MainMenu/main_menu.tres" id="2_svuy1"]
 [ext_resource type="Theme" uid="uid://dxxcqron0p625" path="res://Resources/UITheme/UITheme.tres" id="3_s3eru"]
-[ext_resource type="SpriteFrames" uid="uid://c7rnhx1u5oajl" path="res://Scenes/MainMenu/snickers_frames.tres" id="3_wijbp"]
+[ext_resource type="SpriteFrames" uid="uid://bbwhticpabedd" path="res://Scenes/MainMenu/snickers_frames.tres" id="3_wijbp"]
 
 [sub_resource type="Gradient" id="Gradient_jn74h"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)

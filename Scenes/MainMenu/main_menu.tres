@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://cvdu6gcvgaknx"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://to6k021s4uct"]
 
 [ext_resource type="Texture2D" uid="uid://cbk73croysdy6" path="res://Resources/TileSets/15_Police_Station_16x16.png" id="1_j0k0p"]
 [ext_resource type="Texture2D" uid="uid://csej0ttfjjf48" path="res://Resources/TileSets/2_City_Terrains_16x16.png" id="2_25wsb"]
