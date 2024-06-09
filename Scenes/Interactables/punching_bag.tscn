@@ -1,8 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://cngyp6ii0dwfr"]
+[gd_scene load_steps=26 format=3 uid="uid://0087utw1cc6a"]
 
 [ext_resource type="Script" path="res://Scenes/Interactables/punching_bag.gd" id="1_aoltr"]
-[ext_resource type="Texture2D" uid="uid://bj1l2gde2w1e" path="res://Assets/Spritesheets/animated_punching_bag_left.png" id="1_toanr"]
-[ext_resource type="Texture2D" uid="uid://b42lix2uup0u0" path="res://Assets/Spritesheets/animated_punching_bag_right.png" id="2_q6b40"]
+[ext_resource type="Texture2D" path="res://Assets/Spritesheets/animated_punching_bag_left.png" id="1_toanr"]
+[ext_resource type="Texture2D" path="res://Assets/Spritesheets/animated_punching_bag_right.png" id="2_q6b40"]
 [ext_resource type="AudioStream" uid="uid://dgvlj7grt11g8" path="res://Assets/SFX/hit_03.wav" id="4_gf5mr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6in0q"]
@@ -162,7 +162,7 @@ sprite = NodePath("AnimatedSprite2D")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_ab64a")
-animation = &"idle"
+animation = &"swing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 1)

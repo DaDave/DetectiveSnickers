@@ -1,16 +1,16 @@
-[gd_scene load_steps=27 format=3 uid="uid://dqo8p1ld8yq3g"]
+[gd_scene load_steps=28 format=3 uid="uid://1h3u74tc01aa"]
 
 [ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="1_y3q01"]
-[ext_resource type="PackedScene" uid="uid://cjvjp7guprwdh" path="res://Scenes/Interactables/office_desk.tscn" id="2_c0n00"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/office_desk.tscn" id="2_c0n00"]
 [ext_resource type="Script" path="res://Scenes/CellA.gd" id="2_c63xu"]
 [ext_resource type="PackedScene" uid="uid://xdth7ek4qxm7" path="res://Scenes/Characters/deputy.tscn" id="2_v6u01"]
-[ext_resource type="PackedScene" uid="uid://dd25pdbbgilvr" path="res://Scenes/Characters/waitress.tscn" id="3_0v373"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/waitress.tscn" id="3_0v373"]
 [ext_resource type="Script" path="res://Scenes/CellB.gd" id="3_iqyu8"]
 [ext_resource type="PackedScene" uid="uid://cby6wx85gu5bq" path="res://Scenes/Characters/player.tscn" id="3_ixbpy"]
-[ext_resource type="PackedScene" uid="uid://bltr8qavgxjvx" path="res://Scenes/Characters/gym_bro_a.tscn" id="4_fwtb0"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/gym_bro_a.tscn" id="4_fwtb0"]
 [ext_resource type="PackedScene" uid="uid://ciri27wpl8l7m" path="res://Scenes/PauseMenu/pause_menu.tscn" id="4_ii053"]
-[ext_resource type="PackedScene" uid="uid://w8iw35kh450x" path="res://Scenes/CaseClosedMenu/case_closed_menu.tscn" id="5_253ei"]
 [ext_resource type="AudioStream" uid="uid://ev46kdxq55jr" path="res://Assets/Music/police_station_music.wav" id="7_jcoya"]
+[ext_resource type="PackedScene" uid="uid://jw72sm4n7uia" path="res://Scenes/GameOverMenu/game_over_menu.tscn" id="10_om3pf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msbl7"]
 size = Vector2(29.5, 150)
@@ -36,20 +36,23 @@ size = Vector2(48.2278, 32.2052)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myk6n"]
 size = Vector2(111.775, 16)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sui27"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lk30j"]
+size = Vector2(13.5, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dafq8"]
+size = Vector2(10, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq5gv"]
 size = Vector2(12, 13)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qfy8p"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thbdw"]
+size = Vector2(12, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jx1p"]
 size = Vector2(29, 5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rpr3y"]
-radius = 4.40488
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i73c6"]
+size = Vector2(9.52002, 25.372)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ngab"]
 size = Vector2(99, 32)
@@ -126,28 +129,28 @@ position = Vector2(568.112, 88)
 shape = SubResource("RectangleShape2D_myk6n")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="BlockingEnvironment"]
-position = Vector2(248, 84)
-shape = SubResource("CircleShape2D_sui27")
+position = Vector2(248.25, 76.5)
+shape = SubResource("RectangleShape2D_lk30j")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="BlockingEnvironment"]
-position = Vector2(344, 84)
-shape = SubResource("CircleShape2D_sui27")
+position = Vector2(344, 77)
+shape = SubResource("RectangleShape2D_dafq8")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="BlockingEnvironment"]
 position = Vector2(456, 53.5)
 shape = SubResource("RectangleShape2D_cq5gv")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="BlockingEnvironment"]
-position = Vector2(407, 68)
-shape = SubResource("CircleShape2D_qfy8p")
+position = Vector2(408, 55.5)
+shape = SubResource("RectangleShape2D_thbdw")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="BlockingEnvironment"]
 position = Vector2(384.5, 34.5)
 shape = SubResource("RectangleShape2D_4jx1p")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="BlockingEnvironment"]
-position = Vector2(616.52, 130.372)
-shape = SubResource("CircleShape2D_rpr3y")
+position = Vector2(617, 122)
+shape = SubResource("RectangleShape2D_i73c6")
 
 [node name="CellA" type="StaticBody2D" parent="." node_paths=PackedStringArray("gym_bro")]
 script = ExtResource("2_c63xu")
@@ -195,17 +198,18 @@ z_index = 1
 position = Vector2(270.468, 53.3866)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 7.0
-offset_top = -95.0
-offset_right = 647.0
-offset_bottom = 265.0
+z_index = 2
+offset_left = 20.0
+offset_top = -108.0
+offset_right = 660.0
+offset_bottom = 252.0
 
 [node name="PauseMenu" parent="VBoxContainer" instance=ExtResource("4_ii053")]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="CaseClosedMenu" parent="VBoxContainer" instance=ExtResource("5_253ei")]
+[node name="GameOverMenu" parent="VBoxContainer" instance=ExtResource("10_om3pf")]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3

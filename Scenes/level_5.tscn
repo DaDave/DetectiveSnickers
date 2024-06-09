@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://do7cndssu6b8m"]
+[gd_scene load_steps=3 format=3 uid="uid://bbvin8a142uy7"]
 
-[ext_resource type="TileSet" uid="uid://dpevqka2k5i7i" path="res://Resources/TileSets/lvls.tres" id="1_36tia"]
+[ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="1_36tia"]
 [ext_resource type="AudioStream" uid="uid://vo2pw8073jlq" path="res://Assets/Music/home_music.wav" id="2_wdy17"]
 
 [node name="level_5" type="Node2D"]

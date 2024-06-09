@@ -2,6 +2,7 @@ extends Node
 
 var pause_menu_instance : PauseMenu = null
 var case_closed: CaseClosedMenu
+var game_over: GameOverMenu
 var isPaused : bool = false
 var transition_counter = 0
 
@@ -10,6 +11,8 @@ func _ready():
 	SignalBus.pause_requested.connect(_onPauseRequested)
 	SignalBus.case_closed.connect(_onCaseClosed)
 	SignalBus.case_closed_menu_initiated.connect(_onCaseClosedMenuInitiated)
+	SignalBus.game_over.connect(_onGameOver)
+	SignalBus.game_over_menu_initiated.connect(_onGameOverMenuInitiated)
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
@@ -26,6 +29,12 @@ func _onCaseClosed():
 
 func _onCaseClosedMenuInitiated(_case_closed: CaseClosedMenu):
 	case_closed = _case_closed
+	
+func _onGameOver():
+	game_over.show()
+
+func _onGameOverMenuInitiated(_game_over: GameOverMenu):
+	game_over = _game_over
 
 func pause():
 	if isPaused:

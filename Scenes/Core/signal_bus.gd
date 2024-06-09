@@ -12,4 +12,8 @@ signal case_closed()
 
 signal case_closed_menu_initiated(case_closed: CaseClosedMenu)
 
+signal game_over()
+
+signal game_over_menu_initiated(game_over_closed: GameOverMenu)
+
 signal transition_finished()

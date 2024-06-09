@@ -10,4 +10,4 @@ func interact():
 	SpeechSignalBus.deputy_speak.emit(deputy_text)
 	SpeechSignalBus.deputy_speak.emit(deputy_text2)
 	await SpeechSignalBus.speech_queue_finished
-	SignalBus.case_closed.emit()
+	SignalBus.game_over.emit()
