@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="JameGam-31"
+config/name="Detective Snickers"
+config/version="1.0"
 run/main_scene="res://Scenes/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
