@@ -16,7 +16,7 @@ func _ready():
 	sprite.play("idle_down")
 
 func interact():
-	if !poison_bottle.found:
+	if !poison_bottle or !poison_bottle.found:
 		SpeechSignalBus.queue_speech.emit(speech_component, speech_text)
 	else:
 		SpeechSignalBus.queue_speech.emit(speech_component, confession_text)

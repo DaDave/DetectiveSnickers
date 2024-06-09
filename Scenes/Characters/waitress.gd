@@ -6,7 +6,7 @@ class_name Waitress extends CharacterBody2D
 @export var fridge: Fridge
 
 @export_subgroup("Settings")
-@export var speech_text = "I don't know what happened.\nI turned around and he was just sitting there."
+@export_multiline var speech_text = "I don't know what happened.\nI turned around and he was just sitting there."
 @export var deputy_text = "Interesting..."
 @export var speech_confession_text = "Ok, ok, I'll confess.\nYour impressive performance made it clear\nthat I won't be able to hide what I did."
 @export var speech_confession_text2 = "I loved him, but he didn't love me back.\nWhen I saw him smile while talking to that bitch\nI just snapped."
@@ -17,10 +17,11 @@ func _ready():
 	sprite.play("idle_down")
 
 func interact():
-	if !fridge.read:
+	if !fridge or !fridge.read:
 		SpeechSignalBus.queue_speech.emit(speech_component, speech_text)
-		SpeechSignalBus.deputy_speak.emit(deputy_text)
-	if fridge.read:
+		if !deputy_text.is_empty():
+			SpeechSignalBus.deputy_speak.emit(deputy_text)
+	elif fridge.read:
 		SpeechSignalBus.queue_speech.emit(speech_component, speech_confession_text)
 		SpeechSignalBus.queue_speech.emit(speech_component, speech_confession_text2)
 		SpeechSignalBus.queue_speech.emit(speech_component, speech_confession_text3)
