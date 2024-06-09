@@ -77,4 +77,4 @@ speech_bubble = NodePath("../SpeechBubble")
 
 [node name="SpeechBubble" parent="." instance=ExtResource("4_6u5c1")]
 visible = false
-position = Vector2(-29, -32)
+position = Vector2(0, -32)

@@ -14,11 +14,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="SpeechLabel" type="Label" parent="VerticalBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ylf1r")
-horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="SpeechNinePatchRect" type="NinePatchRect" parent="VerticalBoxContainer/SpeechLabel"]

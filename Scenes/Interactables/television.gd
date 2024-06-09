@@ -21,4 +21,4 @@ func interact():
 		animated_sprite.show()
 		animated_sprite.play("playing")
 		is_playing = true
-		SpeechSignalBus.deputy_speak.emit(deputy_answer_text, deputy_answer_delay)
+		SpeechSignalBus.deputy_speak.emit(deputy_answer_text)

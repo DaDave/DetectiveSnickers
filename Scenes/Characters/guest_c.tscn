@@ -74,7 +74,7 @@ shape = SubResource("RectangleShape2D_es3vg")
 
 [node name="SpeechBubble" parent="." instance=ExtResource("3_kxbf5")]
 visible = false
-position = Vector2(-24, -32)
+position = Vector2(0, -32)
 
 [node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("4_svxfc")]
 speech_bubble = NodePath("../SpeechBubble")
