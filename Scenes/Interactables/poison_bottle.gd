@@ -7,6 +7,7 @@ class_name PoisonBottle extends StaticBody2D
 var found = false
 
 func interact():
+	$BottleAudioStreamPlayer2D.play()
 	SpeechSignalBus.deputy_speak.emit(deputy_text)
 	SpeechSignalBus.deputy_speak.emit(deputy_text2)
 	found = true

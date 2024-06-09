@@ -17,6 +17,7 @@ func _ready():
 
 func interact():
 	if !poison_bottle or !poison_bottle.found:
+		$InteractAudioStreamPlayer2D.play()
 		SpeechSignalBus.queue_speech.emit(speech_component, speech_text)
 	else:
 		SpeechSignalBus.queue_speech.emit(speech_component, confession_text)

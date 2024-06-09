@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh4hgyo3ntgtw"]
+[gd_scene load_steps=5 format=3 uid="uid://c5qhg7ooaa08w"]
 
 [ext_resource type="Texture2D" uid="uid://ywqgbe3an8br" path="res://Assets/Singles/DeadGymGuy.png" id="1_crcf3"]
 [ext_resource type="Script" path="res://Scenes/Interactables/dead_guy_gym.gd" id="1_i74br"]
+[ext_resource type="AudioStream" uid="uid://mj30e6vecf7r" path="res://Assets/SFX/notification.wav" id="3_ju77w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys6o4"]
 size = Vector2(22, 15)
@@ -15,3 +16,6 @@ texture = ExtResource("1_crcf3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_ys6o4")
+
+[node name="InteractAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ju77w")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://xdth7ek4qxm7"]
+[gd_scene load_steps=20 format=3 uid="uid://xdth7ek4qxm7"]
 
 [ext_resource type="Texture2D" uid="uid://b4wxfl1u6pqtt" path="res://Assets/Spritesheets/raider_16.png" id="1_cnyd1"]
 [ext_resource type="Script" path="res://Scenes/Characters/deputy.gd" id="1_h5cxq"]
 [ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="2_23q2g"]
 [ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_xub76"]
+[ext_resource type="AudioStream" uid="uid://mj30e6vecf7r" path="res://Assets/SFX/notification.wav" id="5_ib4mg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8mpg"]
 atlas = ExtResource("1_cnyd1")
@@ -125,3 +126,6 @@ speech_bubble = NodePath("../SpeechBubble")
 [node name="SpeechBubble" parent="." instance=ExtResource("4_xub76")]
 visible = false
 position = Vector2(0, -39)
+
+[node name="InteractAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ib4mg")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://d2hta05ggqebt"]
+[gd_scene load_steps=19 format=3 uid="uid://bh35ahxncg6ty"]
 
 [ext_resource type="Texture2D" uid="uid://v88m8axiboi8" path="res://Assets/Spritesheets/animated_fridge_grey.png" id="1_hp0hu"]
 [ext_resource type="Script" path="res://Scenes/Interactables/fridge.gd" id="1_rippo"]
+[ext_resource type="AudioStream" uid="uid://cfqrdadsjd1tw" path="res://Assets/SFX/open_cooler.wav" id="3_6qa7x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cepdf"]
 atlas = ExtResource("1_hp0hu")
@@ -126,3 +127,6 @@ sprite_frames = SubResource("SpriteFrames_1eq3x")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_u52qh")
+
+[node name="FridgeAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6qa7x")

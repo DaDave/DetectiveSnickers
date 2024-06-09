@@ -10,6 +10,7 @@ var flipped = false
 
 func interact():
 	if !flipped:
+		$BenchAudioStreamPlayer2D.play()
 		rotate(deg_to_rad(90))
 		flipped = true
 		SpeechSignalBus.deputy_speak.emit(deputy_text)

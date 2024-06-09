@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c77k2l42cf333"]
+[gd_scene load_steps=14 format=3 uid="uid://c77k2l42cf333"]
 
 [ext_resource type="Texture2D" uid="uid://7nv0yy5yiic1" path="res://Assets/Spritesheets/guest_a.png" id="1_nvpbv"]
 [ext_resource type="Script" path="res://Scenes/Characters/guest_a.gd" id="1_vs04l"]
 [ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="3_tcsb2"]
 [ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_draao"]
+[ext_resource type="AudioStream" uid="uid://mj30e6vecf7r" path="res://Assets/SFX/notification.wav" id="5_cxxse"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnld5"]
 atlas = ExtResource("1_nvpbv")
@@ -80,3 +81,6 @@ speech_bubble = NodePath("../SpeechBubble")
 [node name="SpeechBubble" parent="." instance=ExtResource("4_draao")]
 visible = false
 position = Vector2(0, -37)
+
+[node name="InteractAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_cxxse")

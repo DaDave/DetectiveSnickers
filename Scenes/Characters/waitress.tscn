@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd25pdbbgilvr"]
+[gd_scene load_steps=7 format=3 uid="uid://dd25pdbbgilvr"]
 
-[ext_resource type="SpriteFrames" uid="uid://4jexi63653cn" path="res://Assets/Spritesheets/waitress.tres" id="1_c2sad"]
+[ext_resource type="SpriteFrames" uid="uid://bapmuc4c6q5dn" path="res://Assets/Spritesheets/waitress.tres" id="1_c2sad"]
 [ext_resource type="Script" path="res://Scenes/Characters/waitress.gd" id="1_no3oj"]
 [ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="3_rmwdo"]
 [ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_1lewi"]
+[ext_resource type="AudioStream" uid="uid://mj30e6vecf7r" path="res://Assets/SFX/notification.wav" id="5_su4b6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfevs"]
 size = Vector2(14, 9)
@@ -30,3 +31,6 @@ speech_bubble = NodePath("../SpeechBubble")
 [node name="SpeechBubble" parent="." instance=ExtResource("4_1lewi")]
 visible = false
 position = Vector2(-27, -40)
+
+[node name="InteractAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_su4b6")

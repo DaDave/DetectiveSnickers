@@ -37,6 +37,7 @@ func fall():
 	_should_fall = true
 
 func handle_on_ground():
+	$GlassBrokeAudioStreamPlayer2D.play()
 	_on_ground = true
 
 	SpeechSignalBus.deputy_speak.emit(deputy_text)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cru2g2uivtb21"]
+[gd_scene load_steps=5 format=3 uid="uid://cjvjp7guprwdh"]
 
 [ext_resource type="Texture2D" uid="uid://dk8xj1nwsg6el" path="res://Assets/Singles/OfficeDesk.png" id="1_r4jro"]
 [ext_resource type="Script" path="res://Scenes/Interactables/office_desk.gd" id="1_w6pyb"]
+[ext_resource type="AudioStream" uid="uid://c5e7gvb3bv1if" path="res://Assets/SFX/move_heavy.wav" id="3_m37fn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ix6am"]
 size = Vector2(32, 16)
@@ -16,3 +17,6 @@ texture = ExtResource("1_r4jro")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-16, -8)
 shape = SubResource("RectangleShape2D_ix6am")
+
+[node name="DeskAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m37fn")

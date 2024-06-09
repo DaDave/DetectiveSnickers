@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://car3vdrh6xu8j" path="res://Resources/TileSets/14_Basement_16x16.png" id="5_n2gvj"]
 [ext_resource type="Texture2D" uid="uid://b3esunta2ox1w" path="res://Resources/TileSets/1_Generic_16x16.png" id="6_hafes"]
 [ext_resource type="Texture2D" uid="uid://bcwyveccaebf8" path="res://Resources/TileSets/3_City_Props_16x16.png" id="7_l3ywl"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactables/fridge.tscn" id="8_2ulwk"]
+[ext_resource type="PackedScene" uid="uid://bh35ahxncg6ty" path="res://Scenes/Interactables/fridge.tscn" id="8_2ulwk"]
 [ext_resource type="PackedScene" uid="uid://cby6wx85gu5bq" path="res://Scenes/Characters/player.tscn" id="8_emdfn"]
 [ext_resource type="PackedScene" uid="uid://ciri27wpl8l7m" path="res://Scenes/PauseMenu/pause_menu.tscn" id="8_tdm6u"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactables/dead_chef.tscn" id="9_5ofv7"]
+[ext_resource type="PackedScene" uid="uid://cngq7406llhlg" path="res://Scenes/Interactables/dead_chef.tscn" id="9_5ofv7"]
 [ext_resource type="PackedScene" uid="uid://w8iw35kh450x" path="res://Scenes/CaseClosedMenu/case_closed_menu.tscn" id="9_qp6fo"]
 [ext_resource type="PackedScene" uid="uid://dd25pdbbgilvr" path="res://Scenes/Characters/waitress.tscn" id="10_3lxbp"]
 [ext_resource type="PackedScene" uid="uid://xdth7ek4qxm7" path="res://Scenes/Characters/deputy.tscn" id="11_5ofaq"]
@@ -6447,4 +6447,5 @@ size_flags_vertical = 3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_d3sbq")
+autoplay = true
 max_polyphony = 2

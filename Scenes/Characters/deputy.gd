@@ -14,6 +14,7 @@ func _ready():
 	
 
 func interact():
+	$InteractAudioStreamPlayer2D.play()
 	SpeechSignalBus.queue_speech.emit(speech_component, deputy_text)
 
 func _on_deputy_speak(text: String):
