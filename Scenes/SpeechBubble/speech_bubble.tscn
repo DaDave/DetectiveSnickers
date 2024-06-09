@@ -19,6 +19,7 @@ alignment = 1
 [node name="SpeechLabel" type="Label" parent="VerticalBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ylf1r")
+horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="SpeechNinePatchRect" type="NinePatchRect" parent="VerticalBoxContainer/SpeechLabel"]
