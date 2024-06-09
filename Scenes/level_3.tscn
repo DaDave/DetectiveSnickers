@@ -151,6 +151,7 @@ layer_4/name = "Object3"
 layer_4/tile_data = PackedInt32Array(196625, 393218, 6, 262161, 393218, 7)
 
 [node name="BlockingEnvironment" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlockingEnvironment"]
 position = Vector2(47, 299)

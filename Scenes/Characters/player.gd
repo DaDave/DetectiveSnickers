@@ -20,7 +20,8 @@ func _physics_process(delta):
 	for i in get_slide_collision_count():
 		var collider = get_slide_collision(i).get_collider()
 		if collider.has_method("interact") && input_component.wants_to_interact():
-			_handle_interaction(collider)
+			if !_is_presenting_card:
+				_handle_interaction(collider)
 		
 
 func _handle_interaction(interactable):
