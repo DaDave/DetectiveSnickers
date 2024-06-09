@@ -1,7 +1,7 @@
 [gd_scene load_steps=53 format=3 uid="uid://dbwe0s5ctpcbu"]
 
 [ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="1_58hgq"]
-[ext_resource type="PackedScene" uid="uid://cngyp6ii0dwfr" path="res://Scenes/Interactables/punching_bag.tscn" id="2_0qt7q"]
+[ext_resource type="PackedScene" uid="uid://0087utw1cc6a" path="res://Scenes/Interactables/punching_bag.tscn" id="2_0qt7q"]
 [ext_resource type="PackedScene" uid="uid://cby6wx85gu5bq" path="res://Scenes/Characters/player.tscn" id="2_scehd"]
 [ext_resource type="PackedScene" uid="uid://c5qhg7ooaa08w" path="res://Scenes/Interactables/dead_guy_gym.tscn" id="3_h5ial"]
 [ext_resource type="PackedScene" uid="uid://xdth7ek4qxm7" path="res://Scenes/Characters/deputy.tscn" id="3_wiv8w"]
