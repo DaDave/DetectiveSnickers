@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bepnglsyir4sg"]
+[gd_scene load_steps=6 format=3 uid="uid://bepnglsyir4sg"]
 
 [ext_resource type="Texture2D" uid="uid://mbejmsqpl1hd" path="res://Assets/Singles/Television.png" id="1_i20jm"]
 [ext_resource type="Script" path="res://Scenes/Interactables/television.gd" id="1_vk8t3"]
 [ext_resource type="SpriteFrames" uid="uid://cu4eroj0ynyim" path="res://Assets/Spritesheets/television_spriteframes.tres" id="2_4fesb"]
+[ext_resource type="AudioStream" uid="uid://cmk7wh8a1tpl" path="res://Assets/SFX/turn_tv.wav" id="4_v5q5m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60hkf"]
 size = Vector2(27.697, 34)
@@ -24,3 +25,6 @@ sprite_frames = ExtResource("2_4fesb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.0881405, 7)
 shape = SubResource("RectangleShape2D_60hkf")
+
+[node name="TurnTVAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_v5q5m")

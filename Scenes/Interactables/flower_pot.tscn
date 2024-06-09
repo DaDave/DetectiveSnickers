@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://2mgqcrq2mmoq"]
+[gd_scene load_steps=6 format=3 uid="uid://il6qt28qevri"]
 
 [ext_resource type="Script" path="res://Scenes/Interactables/flower_pot.gd" id="1_dt615"]
 [ext_resource type="Texture2D" uid="uid://dphqneauv7n4" path="res://Assets/Singles/FlowerPot.png" id="2_6k11j"]
+[ext_resource type="AudioStream" uid="uid://d3cqh0h4htyw" path="res://Assets/SFX/glas_broke_02.wav" id="3_qnn4o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1no7"]
 size = Vector2(8, 31)
@@ -25,3 +26,6 @@ shape = SubResource("RectangleShape2D_t1no7")
 [node name="CollisionGround" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_3noug")
+
+[node name="GlassBrokeAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qnn4o")

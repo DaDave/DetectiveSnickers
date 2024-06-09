@@ -14,6 +14,7 @@ func _ready():
 
 func interact():
 	print("Interacting with TV")
+	$TurnTVAudioStreamPlayer2D.play()
 	if is_playing:
 		animated_sprite.hide()
 		is_playing = false

@@ -28,6 +28,7 @@ func _handle_interaction(interactable):
 	_is_presenting_card = true
 	animation_component.show_card()
 	SpeechSignalBus.queue_speech.emit(speech_component, "I AM DETECTIVE SNICKERS!")
+	$ShowLicenseAudioStreamPlayer2D.play()
 	interactable.interact()
 
 func _on_speech_queue_finished():

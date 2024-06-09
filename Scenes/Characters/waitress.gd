@@ -18,6 +18,7 @@ func _ready():
 
 func interact():
 	if !fridge or !fridge.read:
+		$InteractAudioStreamPlayer2D.play()
 		SpeechSignalBus.queue_speech.emit(speech_component, speech_text)
 		if !deputy_text.is_empty():
 			SpeechSignalBus.deputy_speak.emit(deputy_text)

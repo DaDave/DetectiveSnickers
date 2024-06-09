@@ -5,6 +5,7 @@ class_name OfficeDesk extends StaticBody2D
 @export_multiline var deputy_text2: String = "Go home,\nI'll take care of the reports"
 
 func interact():
+	$DeskAudioStreamPlayer2D.play()
 	rotate(deg_to_rad(90))
 	SpeechSignalBus.deputy_speak.emit(deputy_text)
 	SpeechSignalBus.deputy_speak.emit(deputy_text2)

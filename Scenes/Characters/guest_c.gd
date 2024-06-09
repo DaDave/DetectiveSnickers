@@ -11,4 +11,5 @@ func _ready():
 	sprite.play("idle_down")
 
 func interact():
+	$InteractAudioStreamPlayer2D.play()
 	SpeechSignalBus.queue_speech.emit(speech_component, speech_text)

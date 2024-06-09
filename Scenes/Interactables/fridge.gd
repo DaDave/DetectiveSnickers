@@ -13,9 +13,11 @@ var read = false
 
 func interact():
 	if is_open:
+		$FridgeAudioStreamPlayer2D.play()
 		sprite.play("close")
 		is_open = false
 	else:
+		$FridgeAudioStreamPlayer2D.play()
 		sprite.play("open")
 		is_open = true
 	await sprite.animation_finished

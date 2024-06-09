@@ -9,6 +9,7 @@ func _ready():
 	sprite.animation_looped.connect(_on_animation_looped)
 
 func interact():
+	$BagAudioStreamPlayer2D.play()
 	sprite.play("swing")
 
 func _on_animation_looped():
