@@ -67,6 +67,9 @@ Detective Snickers gains authority by holding up his ID card. Objects that see h
 - 2D-Pixel-Art-Package (https://limezu.itch.io/moderninteriors)
 - 2D-Pixel-Art-Package (https://limezu.itch.io/modernexteriors)
 
+  ![image](https://github.com/DaDave/DetectiveSnickers/assets/18548898/e86f54f8-464f-42d4-98bd-4a3480128820)
+
+
 ### Music
 
 - mostly self created 8-bit music
