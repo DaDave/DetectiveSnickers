@@ -6,9 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://b2ekhi3x148l8" path="res://Assets/Music/driving_mission_music.wav" id="4_nopqi"]
 [ext_resource type="AudioStream" uid="uid://bj0kibwykjr08" path="res://Assets/Music/police_horn.wav" id="5_pf35l"]
 
-[node name="TransitionRightMission" type="Node2D" node_paths=PackedStringArray("police_car")]
+[node name="TransitionRightMission" type="Node2D" node_paths=PackedStringArray("police_car", "horn_audio_player")]
 script = ExtResource("1_04uj5")
 police_car = NodePath("PoliceCar")
+horn_audio_player = NodePath("PoliceCar/HornAudioStreamPlayer2D2")
 
 [node name="PoliceCar" parent="." instance=ExtResource("2_5n56n")]
 position = Vector2(340, 299)
@@ -17,6 +18,16 @@ movement_speed = 2.0
 [node name="Camera2D" type="Camera2D" parent="PoliceCar"]
 position = Vector2(1, -123)
 scale = Vector2(0.799999, 3.12)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="PoliceCar"]
+position = Vector2(-340, -299)
+stream = ExtResource("4_nopqi")
+autoplay = true
+max_polyphony = 2
+
+[node name="HornAudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="PoliceCar"]
+position = Vector2(-340, -299)
+stream = ExtResource("5_pf35l")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -35,11 +46,3 @@ layer_1/tile_data = PackedInt32Array(-65536, 1703949, 14, 0, 1703949, 15, 65536,
 layer_2/name = "Bushes"
 layer_2/z_index = 2
 layer_2/tile_data = PackedInt32Array(589979, 1310733, 87, 589980, 1376269, 87, 589975, 1310733, 87, 589976, 1376269, 87, 590039, 1179661, 87, 590040, 1245197, 87, 590043, 1179661, 87, 590044, 1245197, 87, 589839, 1310733, 87, 589840, 1376269, 87, 589837, 1310733, 87, 589838, 1376269, 87, 589836, 1310733, 87, 589898, 1310733, 87, 589899, 1376269, 87, 589944, 1310733, 87, 589945, 1376269, 87)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_nopqi")
-autoplay = true
-max_polyphony = 2
-
-[node name="HornAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_pf35l")

@@ -2,6 +2,7 @@ class_name TransitionRightMission extends Node2D
 
 @export_subgroup("Nodes")
 @export var police_car: PoliceCar
+@export var horn_audio_player: AudioStreamPlayer2D
 
 func _ready():
 	if MainSingleton.transition_counter == 0:
@@ -15,7 +16,9 @@ func first_transition():
 	await SpeechSignalBus.speech_queue_finished
 	await InputSingleton.interact_pressed
 	police_car.snickers_speak("I AM DETECTIVE SNICKERS!")
-	$HornAudioStreamPlayer2D.play()
+	horn_audio_player.play()
+	police_car.deputy_speak("Awesome! Now we just have to\narrive at the crime scene.")
+	police_car.deputy_speak("I really can't wait to see you walk around using\nArrow Keys or WSAD")
 	await SpeechSignalBus.speech_queue_finished
 	await get_tree().create_timer(3.0).timeout
 	SceneSwitcherSingleton.switch_to_next_scene()
