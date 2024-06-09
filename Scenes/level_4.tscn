@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dqo8p1ld8yq3g"]
+[gd_scene load_steps=28 format=3 uid="uid://1h3u74tc01aa"]
 
 [ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="1_y3q01"]
 [ext_resource type="PackedScene" uid="uid://cjvjp7guprwdh" path="res://Scenes/Interactables/office_desk.tscn" id="2_c0n00"]
