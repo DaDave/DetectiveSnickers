@@ -57,7 +57,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0jom"]
-size = Vector2(14, 8)
+size = Vector2(14, 24)
 
 [node name="GuestA" type="CharacterBody2D" node_paths=PackedStringArray("speech_component", "sprite")]
 script = ExtResource("1_vs04l")
@@ -72,7 +72,7 @@ frame = 4
 frame_progress = 0.603636
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_x0jom")
 
 [node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("3_tcsb2")]

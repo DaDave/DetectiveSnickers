@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://dd25pdbbgilvr"]
 
-[ext_resource type="SpriteFrames" uid="uid://bapmuc4c6q5dn" path="res://Assets/Spritesheets/waitress.tres" id="1_c2sad"]
+[ext_resource type="SpriteFrames" uid="uid://8w44aghx24wa" path="res://Assets/Spritesheets/waitress.tres" id="1_c2sad"]
 [ext_resource type="Script" path="res://Scenes/Characters/waitress.gd" id="1_no3oj"]
 [ext_resource type="PackedScene" uid="uid://d4jeq74baygt6" path="res://Scenes/Components/speech_component.tscn" id="3_rmwdo"]
 [ext_resource type="PackedScene" uid="uid://dnns10i1qvg63" path="res://Scenes/SpeechBubble/speech_bubble.tscn" id="4_1lewi"]
 [ext_resource type="AudioStream" uid="uid://mj30e6vecf7r" path="res://Assets/SFX/notification.wav" id="5_su4b6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfevs"]
-size = Vector2(14, 9)
+size = Vector2(14, 25)
 
 [node name="Waitress" type="CharacterBody2D" node_paths=PackedStringArray("speech_component", "sprite")]
 script = ExtResource("1_no3oj")
@@ -22,7 +22,7 @@ frame = 4
 frame_progress = 0.445298
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_xfevs")
 
 [node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("3_rmwdo")]
