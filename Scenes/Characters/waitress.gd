@@ -2,6 +2,7 @@ class_name Waitress extends CharacterBody2D
 
 @export_subgroup("Nodes")
 @export var speech_component: SpeechComponent
+@export var sprite: AnimatedSprite2D
 @export var fridge: Fridge
 
 @export_subgroup("Settings")
@@ -11,6 +12,9 @@ class_name Waitress extends CharacterBody2D
 @export var speech_confession_text2 = "I loved him, but he didn't love me back.\nWhen I saw him smile while talking to that bitch\nI just snapped."
 @export var speech_confession_text3 = "If I can't have him, nobody will."
 @export var deputy_confession_text = "I really don't know how you do it, Detective Snickers.\nYou must be the most competent Detective\nin the history of solving murders."
+
+func _ready():
+	sprite.play("idle_down")
 
 func interact():
 	if !fridge.read:

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bw341mgpvbfnn" path="res://Scenes/SpeechBubble/speech_bubble_background.png" id="2_b34u2"]
 
 [node name="SpeechBubble" type="Node2D"]
+z_index = 1
 script = ExtResource("1_f3thj")
 
 [node name="VerticalBoxContainer" type="VBoxContainer" parent="."]

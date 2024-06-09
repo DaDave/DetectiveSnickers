@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://vg5fokoo2q5p"]
+[gd_scene load_steps=56 format=3 uid="uid://vg5fokoo2q5p"]
 
 [ext_resource type="Texture2D" uid="uid://c3wcoc2be535c" path="res://Resources/TileSets/24_Ice_Cream_Shop.png" id="1_002rp"]
 [ext_resource type="Texture2D" uid="uid://b5essd4akn1e5" path="res://Resources/TileSets/12_Kitchen_16x16.png" id="2_tinj6"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://w8iw35kh450x" path="res://Scenes/CaseClosedMenu/case_closed_menu.tscn" id="9_qp6fo"]
 [ext_resource type="PackedScene" uid="uid://dd25pdbbgilvr" path="res://Scenes/Characters/waitress.tscn" id="10_3lxbp"]
 [ext_resource type="PackedScene" uid="uid://xdth7ek4qxm7" path="res://Scenes/Characters/deputy.tscn" id="11_5ofaq"]
+[ext_resource type="PackedScene" uid="uid://c77k2l42cf333" path="res://Scenes/Characters/guest_a.tscn" id="12_0ltlx"]
+[ext_resource type="PackedScene" uid="uid://cjsj2osljiyd6" path="res://Scenes/Characters/guest_b.tscn" id="13_fedxe"]
+[ext_resource type="PackedScene" uid="uid://bytyv6e6kp0n4" path="res://Scenes/Characters/guest_c.tscn" id="17_vmuti"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mjmks"]
 texture = ExtResource("1_002rp")
@@ -6407,9 +6410,6 @@ position = Vector2(40, 40)
 [node name="DeadChef" parent="." instance=ExtResource("9_5ofv7")]
 position = Vector2(38, 121)
 
-[node name="Player" parent="." instance=ExtResource("8_emdfn")]
-position = Vector2(186, 350)
-
 [node name="Deputy" parent="." instance=ExtResource("11_5ofaq")]
 position = Vector2(203, 216)
 deputy_text = "You think the kitchen's still open?"
@@ -6417,6 +6417,18 @@ deputy_text = "You think the kitchen's still open?"
 [node name="Waitress" parent="." node_paths=PackedStringArray("fridge") instance=ExtResource("10_3lxbp")]
 position = Vector2(233, 136)
 fridge = NodePath("../Fridge")
+
+[node name="GuestA" parent="." instance=ExtResource("12_0ltlx")]
+position = Vector2(409, 54)
+
+[node name="GuestB" parent="." instance=ExtResource("13_fedxe")]
+position = Vector2(343, 97)
+
+[node name="GuestC" parent="." instance=ExtResource("17_vmuti")]
+position = Vector2(330, 149)
+
+[node name="Player" parent="." instance=ExtResource("8_emdfn")]
+position = Vector2(186, 350)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_right = 640.0
