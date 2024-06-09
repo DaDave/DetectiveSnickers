@@ -102,8 +102,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8g5v0"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkm4n"]
+size = Vector2(14, 9)
 
 [node name="Deputy" type="CharacterBody2D" node_paths=PackedStringArray("speech_component", "sprite")]
 script = ExtResource("1_h5cxq")
@@ -116,7 +116,8 @@ sprite_frames = SubResource("SpriteFrames_akhin")
 animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8g5v0")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_xkm4n")
 
 [node name="SpeechComponent" parent="." node_paths=PackedStringArray("speech_bubble") instance=ExtResource("2_23q2g")]
 speech_bubble = NodePath("../SpeechBubble")

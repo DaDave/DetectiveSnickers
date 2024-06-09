@@ -6,7 +6,8 @@ var scene_path_array = [
 	"res://Scenes/level_1.tscn",
 	"res://Scenes/level_2.tscn",
 	"res://Scenes/level_3.tscn",
-	"res://Scenes/level_4.tscn"
+	"res://Scenes/level_4.tscn",
+	"res://Scenes/MainMenu/main_menu.tscn"
 ]
 func _ready():
 	var root = get_tree().root
