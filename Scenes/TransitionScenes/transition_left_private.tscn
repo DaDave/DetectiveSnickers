@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/TransitionScenes/transition_left_private.gd" id="1_llr6q"]
 [ext_resource type="PackedScene" uid="uid://ovthti8tjbm5" path="res://Scenes/TransitionScenes/private_car.tscn" id="2_2qork"]
-[ext_resource type="TileSet" uid="uid://dpevqka2k5i7i" path="res://Resources/TileSets/lvls.tres" id="3_7tx5y"]
+[ext_resource type="TileSet" uid="uid://cq3i3yghobog7" path="res://Resources/TileSets/lvls.tres" id="3_7tx5y"]
 
 [node name="TransitionLeftMission" type="Node2D"]
 position = Vector2(688, 251)
